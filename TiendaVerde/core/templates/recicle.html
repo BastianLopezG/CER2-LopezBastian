@@ -1,0 +1,49 @@
+{% extends "./base.html" %}
+
+{% block title %} Solicitud de Reciclaje {% endblock %}
+
+{% block body %}
+
+<div class="form-container" style="padding: 20px;"></div>
+        <form id="recyclingForm">
+            <h2 style="margin-bottom: 20px; margin-top: 20px;">Formulario de Reciclaje</h2>
+
+            <!-- Tipo de Residuo -->
+            <label for="tipoResiduo" style="margin-left: 30px;">Tipo de Residuo:</label>
+            <select id="tipoResiduo" name="tipoResiduo" required>
+                <option value="">Seleccione un tipo de residuo</option>
+                <option value="plastico">Plástico</option>
+                <option value="papel">Papel</option>
+                <option value="vidrio">Vidrio</option>
+                <option value="metales">Metales</option>
+                <option value="electronicos">Electrónicos</option>
+            </select>
+
+            <!-- Subcategoría de Residuo -->
+            <label for="subcategoriaResiduo" style="margin-left: 30px;">Subcategoría de Residuo:</label>
+            <select id="subcategoriaResiduo" name="subcategoriaResiduo" required>
+                <option value="">Seleccione una subcategoría</option>
+            </select>
+
+            <!-- Campos adicionales -->
+            <label for="nombre" style="margin-left: 30px;">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="correo" style="margin-left: 30px;">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required>
+
+            <label for="direccion" style="margin-left: 30px;">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+
+            <label for="comentarios" style="margin-left: 30px;">Comentarios Adicionales:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Ingrese sus comentarios"></textarea>
+
+            <!-- Botón de envio -->
+            <button type="submit" style="background-color: rgb(11, 96, 255); color: #FFFFFF; width: 50%; margin-left: 15%; margin-top: 20px;">Enviar</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+    
+
